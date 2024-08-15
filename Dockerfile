@@ -10,7 +10,7 @@ ARG AWS_CLI_VERSION
 ARG DOCKER_CLI_VERSION
 
 RUN apt-get -qq update
-RUN apt install -qq -y curl unzip jq ca-certificates open-ssh
+RUN apt install -qq -y curl unzip jq ca-certificates openssh-client
 RUN curl -sS -O 'https://awscli.amazonaws.com/awscli-exe-linux-x86_64-'${AWS_CLI_VERSION}'.zip'
 RUN unzip -qq awscli-exe-linux-x86_64-${AWS_CLI_VERSION}.zip
 RUN ./aws/install
