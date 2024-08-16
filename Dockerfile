@@ -25,5 +25,6 @@ RUN echo \
     tee /etc/apt/sources.list.d/docker.list > /dev/null
 RUN apt-get update
 RUN apt-get install -qq -y docker-ce=${DOCKER_CLI_VERSION} docker-ce-cli=${DOCKER_CLI_VERSION} containerd.io
+RUN systemctl enable docker
 
 RUN apt-get clean
