@@ -1,6 +1,6 @@
 # Docker AWS
 
-An ubuntu aws docker with all necessary installables that are required to run aws commands inside.
+An ubuntu docker with all necessary installables that are required to run aws commands inside.
 
 This is intended to be used with GitLab's CI/CD pipeline as a docker image.
 
@@ -33,8 +33,8 @@ docker run --name docker-aws --rm -ti docker-aws bash
 
 ```yaml
 job-build:
-  stage: build
   image: swateekj/docker-aws:latest
+  stage: build
   script: |
     echo "Your commands go here"
   rules:
